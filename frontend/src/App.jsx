@@ -15,11 +15,11 @@ function App() {
          <BrowserRouter>
          <NavBar />
          <Routes>
-        
-         <Route path='/assignment' element={<Assignment/>}></Route>
-         <Route path='/teacherprofile' element={<TeacherProfile/>}></Route>
-         <Route path='/studentprofile' element={<StudentProfile/>}></Route>
-         <Route path='/task' element={<Task/>}></Route>
+         <Route path="/" element={<h1>Welcome to the Assignment Tracker</h1>} />
+         <Route path='/Assignment' element={<Assignment/>}></Route>
+         <Route path='/TeacherProfile' element={<TeacherProfile/>}></Route>
+         <Route path='/StudentProfile' element={<StudentProfile/>}></Route>
+         <Route path='/Task' element={<Task/>}></Route>
          </Routes>
          </BrowserRouter>
        

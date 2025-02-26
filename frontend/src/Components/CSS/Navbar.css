@@ -1,0 +1,31 @@
+nav {
+    background-color: #333;
+    padding: 10px;
+    width: 200px; /* Adjust width as needed */
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixed to the left */
+    top: 0;
+    left: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 15px;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 18px;
+  }
+  
+  li a:hover {
+    background-color: #555;
+  }
+  
