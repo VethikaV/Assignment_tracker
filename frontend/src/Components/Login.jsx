@@ -1,10 +1,10 @@
-
+import React, { useState, useEffect } from "react";
 
 const Login = () => {
   
   return (
     <div >
-      <h2>Assigned task</h2>
+      <h2>Assigned Tasks</h2>
       
     </div>
   );

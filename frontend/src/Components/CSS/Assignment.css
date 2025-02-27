@@ -1,0 +1,34 @@
+.assignment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #f4f4f4;
+  }
+  
+  .assignment-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .assignment-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .assignment-description {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .assignment-dueDate {
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+  }
+  

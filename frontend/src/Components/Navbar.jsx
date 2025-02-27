@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import './CSS/Navbar.css'
+import { Link, useLocation } from "react-router-dom";
+import './CSS/Navbar.css';
 
 const Navbar = () => {
+  const location = useLocation(); // Get current route
+
   return (
     <nav>
       <ul>
@@ -12,6 +14,13 @@ const Navbar = () => {
         <li><Link to="/StudentProfile">Student Profile</Link></li>
         <li><Link to="/TeacherProfile">Teacher Profile</Link></li>
       </ul>
+
+      {/* Show Signup link only on the Signup page */}
+      {location.pathname === "/Signup" && (
+        <div className="signup-link">
+          <p>Already have an account? <Link to="/Login">Login</Link></p>
+        </div>
+      )}
     </nav>
   );
 };
