@@ -1,0 +1,62 @@
+.teacher-profile {
+    width: 350px;
+    margin: 100px auto 0 250px; /* Adjust for navbar */
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #007bff;
+  }
+  
+  .teacher-name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .profile-details {
+    text-align: left;
+    margin-top: 15px;
+  }
+  
+  .profile-details p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #333;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .teacher-profile {
+      margin-left: 220px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .teacher-profile {
+      margin-left: 180px;
+      width: 320px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .teacher-profile {
+      margin: 50px auto;
+      max-width: 90%;
+    }
+  }
+  

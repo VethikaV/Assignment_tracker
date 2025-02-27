@@ -1,76 +1,32 @@
-/* Sidebar Navigation */
 nav {
-  background-color: #222;  /* Darker shade for a modern look */
-  width: 220px; /* Slightly wider for better readability */
-  height: 100vh; /* Full height */
-  position: fixed; /* Fixed to the left */
+  width: 250px; /* Set a fixed width for the sidebar */
+  background: #222;
+  position: fixed; /* Keep it fixed */
   top: 0;
   left: 0;
-  padding-top: 20px; /* Space from top */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  padding-top: 20px;
+  z-index: 1000; /* Ensure it's above other elements */
 }
 
-/* Navigation List */
-ul {
-  list-style-type: none;
+nav ul {
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Navigation Links */
-li {
-  padding: 12px 20px;
+nav ul li {
+  padding: 15px 20px;
 }
 
-li a {
+nav ul li a {
+  color: #fff;
   text-decoration: none;
-  color: white;
-  display: block;
   font-size: 18px;
-  font-weight: 500;
-  border-radius: 5px; /* Rounded corners */
-  transition: background 0.3s ease, padding-left 0.2s;
-}
-
-/* Hover Effect */
-li a:hover {
-  background-color: #444;
-  padding-left: 25px; /* Small slide effect */
-}
-
-/* Active Link Highlight */
-li a.active {
-  background-color: #007bff; /* Blue highlight for active page */
   font-weight: bold;
+  display: block;
 }
 
-/* Signup Link at Bottom */
-.signup-link {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  width: 100%;
-}
-
-.signup-link a {
-  color: #00bfff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.signup-link a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-  nav {
-      width: 180px; /* Reduce width for smaller screens */
-  }
-
-  li a {
-      font-size: 16px;
-  }
+nav ul li a:hover {
+  color: #007bff;
 }

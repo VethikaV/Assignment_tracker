@@ -1,34 +1,58 @@
 .assignment-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f4f4f4;
+  margin-left: 220px; /* Adjust margin to match navbar width */
+  padding: 20px;
+}
+
+/* Assignment Card */
+.assignment-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* Assignment Title */
+.assignment-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Assignment Description */
+.assignment-description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Due Date Styling */
+.assignment-dueDate {
+  font-size: 14px;
+  font-weight: bold;
+  color: red;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .assignment-container {
+      margin-left: 180px; /* Adjust for smaller screens */
   }
-  
+}
+
+@media (max-width: 600px) {
+  .assignment-container {
+      margin-left: 0; /* Remove margin for mobile view */
+      justify-content: flex-start;
+      padding: 10px;
+  }
+
   .assignment-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+      width: 90%; /* Make it full width on smaller screens */
   }
-  
-  .assignment-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .assignment-description {
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .assignment-dueDate {
-    font-size: 14px;
-    font-weight: bold;
-    color: red;
-    margin-top: 10px;
-  }
-  
+}

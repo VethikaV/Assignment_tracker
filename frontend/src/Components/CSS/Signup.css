@@ -1,0 +1,33 @@
+/* Ensure the navbar width is set (Assuming 250px width) */
+.signup-container {
+    width: 400px;
+    margin: 100px auto 0 270px; /* Push form to the right, same as navbar width */
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 1024px) {
+    .signup-container {
+        margin-left: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        margin-left: 230px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .signup-container {
+        margin: 70px auto;
+        max-width: 90%;
+        margin-left: 10%;
+    }
+}

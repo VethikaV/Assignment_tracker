@@ -13,14 +13,8 @@ const Navbar = () => {
         <li><Link to="/Task">Task</Link></li>
         <li><Link to="/StudentProfile">Student Profile</Link></li>
         <li><Link to="/TeacherProfile">Teacher Profile</Link></li>
+        <li><Link to="/Signup">Signup</Link></li>
       </ul>
-
-      {/* Show Signup link only on the Signup page */}
-      {location.pathname === "/Signup" && (
-        <div className="signup-link">
-          <p>Already have an account? <Link to="/Login">Login</Link></p>
-        </div>
-      )}
     </nav>
   );
 };

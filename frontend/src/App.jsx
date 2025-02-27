@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './Components/Navbar';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
-import TeacherProfile from './Components/TeacherProfile';
-import StudentProfile from './Components/StudentProfile';
-import Assignment from './Components/Assignment';
-import Task from './Components/Task';
+import TeacherProfile from './Components/Teacher/TeacherProfile';
+import StudentProfile from './Components/Student/StudentProfile';
+import Assignment from './Components/Student/Assignment';
+import Task from './Components/Teacher/Task';
 
 function App() {
   const [count, setCount] = useState(0)

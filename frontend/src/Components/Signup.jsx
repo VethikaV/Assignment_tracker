@@ -1,7 +1,11 @@
 import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import './CSS/Signup.css';
+
+
 function Signup() {
   const navigate = useNavigate();
   const [firstName, setFN] = useState("");

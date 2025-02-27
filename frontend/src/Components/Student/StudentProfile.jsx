@@ -1,6 +1,6 @@
 import React from "react";
-import "./CSS/StudentProfile.css";
-import profileImage from "../assets/Student_profile.jpeg"; // Update with actual image path
+import "../CSS/StudentProfile.css";
+import profileImage from '../CSS/Student_profile.jpeg';
 
 const StudentProfile = () => {
   return (
@@ -12,7 +12,7 @@ const StudentProfile = () => {
       </div>
       <div className="profile-details">
         <p><strong>Department:</strong> Computer Science</p>
-        <p><strong>Year:</strong> 3rd Year</p>
+        <p><strong>Batch</strong> 2026</p>
         <p><strong>Address:</strong> 123 Main Street, City</p>
       </div>
     </div>
