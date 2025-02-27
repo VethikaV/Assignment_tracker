@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../CSS/Task.css'
+import './CSS/Task.css'
 
 const Task = () => {
   

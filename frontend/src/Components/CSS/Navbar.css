@@ -1,22 +1,27 @@
 nav {
-  width: 250px; /* Set a fixed width for the sidebar */
+  width: 100%; /* Full width across the top */
   background: #222;
-  position: fixed; /* Keep it fixed */
+  position: fixed; /* Fixed at the top */
   top: 0;
   left: 0;
-  height: 100%;
-  padding-top: 20px;
-  z-index: 1000; /* Ensure it's above other elements */
+  height: 60px; /* Adjust height */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
 }
 
 nav ul {
   list-style: none;
+  display: flex; /* Make it horizontal */
   padding: 0;
   margin: 0;
+  width: 100%;
+  justify-content: space-evenly; /* Distribute items evenly */
 }
 
 nav ul li {
-  padding: 15px 20px;
+  padding: 10px 0;
 }
 
 nav ul li a {
@@ -25,6 +30,7 @@ nav ul li a {
   font-size: 18px;
   font-weight: bold;
   display: block;
+  padding: 10px 15px; /* Spacing around links */
 }
 
 nav ul li a:hover {

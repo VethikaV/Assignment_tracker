@@ -1,6 +1,6 @@
 import React from "react";
-import "../CSS/TeacherProfile.css"; 
-import profileImage from '../CSS/Teacherprofile_image.jpeg';
+import "./CSS/TeacherProfile.css"; 
+import profileImage from './CSS/Teacherprofile_image.jpeg';
 
 
 function TeacherProfile() {

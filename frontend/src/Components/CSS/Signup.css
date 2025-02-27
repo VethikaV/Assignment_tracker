@@ -1,33 +1,81 @@
-/* Ensure the navbar width is set (Assuming 250px width) */
+
 .signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  margin-top: 60px; /* Adjust this value based on the height of your navigation bar */
+}
+  
+  /* Form container */
+  .signup-form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 400px;
-    margin: 100px auto 0 270px; /* Push form to the right, same as navbar width */
-    padding: 30px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
-    position: relative;
-}
-
-/* Adjust for smaller screens */
-@media (max-width: 1024px) {
-    .signup-container {
-        margin-left: 260px;
-    }
-}
-
-@media (max-width: 768px) {
-    .signup-container {
-        margin-left: 230px;
-        width: 350px;
-    }
-}
-
-@media (max-width: 600px) {
-    .signup-container {
-        margin: 70px auto;
-        max-width: 90%;
-        margin-left: 10%;
-    }
-}
+  }
+  
+  /* Title of the form */
+  .signup-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Form styling */
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Label styling */
+  .signup-label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+  }
+  
+  /* Input field styling */
+  .signup-input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Button styling */
+  .signup-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .signup-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Login text styling */
+  .signup-login-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Login link styling */
+  .signup-login-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signup-login-link:hover {
+    text-decoration: underline;
+  }

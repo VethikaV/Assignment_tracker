@@ -1,5 +1,5 @@
 import React from "react";
-import "../CSS/Assignment.css";
+import "./CSS/Assignment.css";
 
 const Assignment = () => {
   return (
