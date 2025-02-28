@@ -1,28 +1,30 @@
 /* Task Container */
 .task-container {
-  width: 50%;
-  margin: 50px auto;
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display:flex;
+  width: 100%;
+
+  justify-content: center;
+  justify-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #87CEFA, #1E90FF); /* Sky Blue Gradient */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
+  color: #fff;
 }
 
 /* Heading */
 .task-container h2 {
   margin-bottom: 15px;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #333;
 }
 
 /* Task Form */
 .task-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
 /* Form Inputs */
@@ -31,26 +33,25 @@
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 8px;
   font-size: 16px;
   background: #fff;
   color: #333;
   outline: none;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
-/* Textarea */
 .task-form textarea {
   resize: none;
-  min-height: 100px;
+  min-height: 80px;
 }
 
 /* Input Focus Effect */
 .task-form input:focus,
 .task-form textarea:focus {
   background: #f0f8ff;
-  box-shadow: 0 0 8px rgba(0, 74, 173, 0.4);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
 /* Task Form Button */
@@ -58,110 +59,71 @@
   width: 100%;
   padding: 14px;
   background: #004aad;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease;
 }
 
 .task-form button:hover {
   background: #00357a;
 }
 
-/* Task List */
+/* Task List Sections */
 .task-list {
   margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
   text-align: left;
 }
 
 .task-list h3 {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 10px;
-  color: #222;
 }
 
-/* Individual Task Item */
+/* Task Items */
 .task-item {
-  background: #f8f9fa;
-  padding: 12px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  border-left: 5px solid #004aad;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-/* Task Title */
-.task-item h4 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-  color: #004aad;
-}
-
-/* Task Description */
-.task-item p {
-  font-size: 14px;
-  color: #555;
-  margin: 5px 0;
-}
-
-/* Task Due Date */
-.task-item small {
-  font-size: 12px;
-  color: #777;
-}
-
-/* Add Task Button */
-.add-task-btn {
-  background: #28a745;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  cursor: pointer;
+  background: #fff;
+  padding: 15px;
+  margin:  0;
   border-radius: 8px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  width: 200px;
-  text-align: center;
-  margin: 10px 0;
+  color: #333;
+  transition: transform 0.2s ease;
 }
 
-.add-task-btn:hover {
-  background: #218838;
-  transform: scale(1.05);
+.task-item:hover {
+  transform: scale(1.02);
+}
+
+/* Different Colors for Current and Previous Tasks */
+.task-item.current {
+  border-left: 6px solid #28a745; /* Green for current tasks */
+}
+
+.task-item.previous {
+  border-left: 6px solid #dc3545; /* Red for previous tasks */
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .task-container {
-    width: 70%;
+    width: 450px;
   }
 }
 
 @media (max-width: 768px) {
   .task-container {
-    width: 90%;
+    width: 400px;
   }
 }
 
 @media (max-width: 600px) {
   .task-container {
-    width: 95%;
-    padding: 15px;
-  }
-
-  .task-form input,
-  .task-form textarea {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .task-form button {
-    padding: 12px;
-    font-size: 16px;
+    width: 90%;
   }
 }

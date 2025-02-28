@@ -1,38 +1,78 @@
 nav {
-  width: 100%; /* Full width across the top */
-  background: #222;
-  position: fixed; /* Fixed at the top */
+  width: 100%;
+  background: #2c3e50; /* A modern dark blue shade */
+  position: fixed;
   top: 0;
   left: 0;
-  height: 60px; /* Adjust height */
+  height: 70px; /* Slightly increased height */
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 30px; /* Increased padding */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   z-index: 1000;
 }
 
 nav ul {
   list-style: none;
-  display: flex; /* Make it horizontal */
+  display: flex;
   padding: 0;
   margin: 0;
   width: 100%;
-  justify-content: space-evenly; /* Distribute items evenly */
-}
+  justify-content:  space-evenly;
 
-nav ul li {
-  padding: 10px 0;
 }
-
 nav ul li a {
-  color: #fff;
+  color: #ecf0f1; /* Light grey for contrast */
   text-decoration: none;
   font-size: 18px;
-  font-weight: bold;
-  display: block;
-  padding: 10px 15px; /* Spacing around links */
+  font-weight: 500;
+  padding: 14px 24px; /* Balanced padding */
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  display: inline-block;
 }
 
+/* Underline effect with animation */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #3498db; /* Elegant blue accent */
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+/* Smooth hover effect */
 nav ul li a:hover {
-  color: #007bff;
+  color: #3498db; /* Elegant color shift */
+}
+
+/* Expanding underline effect */
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Optional: Slight press effect on click */
+nav ul li a:active {
+  transform: translateY(2px);
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 60px; /* Reduce height on smaller screens */
+    padding: 0 15px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
 }

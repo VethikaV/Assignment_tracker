@@ -40,6 +40,11 @@ const Task = () => {
     }
   };
 
+  // Separate tasks into Current and Previous based on the due date
+  const today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
+  const currentTasks = tasks.filter((t) => t.dueDate >= today);
+  const previousTasks = tasks.filter((t) => t.dueDate < today);
+
   return (
     <div className="task-container">
       <h2>Create Assignment</h2>
@@ -50,13 +55,27 @@ const Task = () => {
         <button type="submit">Add Task</button>
       </form>
 
-      {/* Task List */}
+      {/* Current Tasks */}
       <div className="task-list">
-        <h3>Assigned Tasks</h3>
-        {tasks.length === 0 ? <p>No tasks available</p> : (
-          tasks.map((t, index) => (
-            <div key={index} className="task-item">
-              <h4>{t.title}</h4>
+        <h3>📌 Current Tasks</h3>
+        {currentTasks.length === 0 ? <p>No current tasks</p> : (
+          currentTasks.map((t, index) => (
+            <div key={index} className="task-item current">
+              <h4>Task {index + 1}: {t.title}</h4>
+              <p>{t.description}</p>
+              <small>Due: {t.dueDate}</small>
+            </div>
+          ))
+        )}
+      </div>
+
+      {/* Previous Tasks */}
+      <div className="task-list">
+        <h3>✅ Previous Tasks</h3>
+        {previousTasks.length === 0 ? <p>No previous tasks</p> : (
+          previousTasks.map((t, index) => (
+            <div key={index} className="task-item previous">
+              <h4>Task {index + 1}: {t.title}</h4>
               <p>{t.description}</p>
               <small>Due: {t.dueDate}</small>
             </div>
