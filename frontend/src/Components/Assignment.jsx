@@ -1,16 +1,33 @@
-import React from "react";
-import "./CSS/Assignment.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Assignment = () => {
+  const [assignments, setAssignments] = useState([]);
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      try {
+        const response = await axios.get("https://your-backend-url.com/tasks");
+        setAssignments(response.data);
+      } catch (error) {
+        console.error("Error fetching tasks:", error);
+      }
+    };
+    fetchTasks();
+  }, []);
+
   return (
-    <div className="assignment-container">
-      <div className="assignment-card">
-        <h2 className="assignment-title">Assignment Title</h2>
-        <p className="assignment-description">
-          This is a sample assignment description. Complete it by the due date.
-        </p>
-        <p className="assignment-dueDate">Due Date: March 5, 2025</p>
-      </div>
+    <div>
+      <h2>Assignments</h2>
+      <ul>
+        {assignments.map((assignment, index) => (
+          <li key={index}>
+            <h3>{assignment.title}</h3>
+            <p>{assignment.description}</p>
+            <p><strong>Due Date:</strong> {assignment.dueDate}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

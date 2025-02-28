@@ -1,31 +1,42 @@
+/* Centering the login container */
 .login-container {
     width: 350px;
-    margin: 100px auto 0 250px; /* Adjust left margin to match the navbar */
-    padding: 20px;
+    margin: 100px auto; /* Centers the container horizontally */
+    padding: 25px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+/* Heading styles */
 .login-container h1 {
     font-size: 24px;
     margin-bottom: 15px;
+    color: #333;
 }
 
+/* Input field styling */
 .login-form input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 8px 0;
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
 }
 
+.login-form input:focus {
+    border-color: #007bff;
+}
+
+/* Button styles */
 .login-form button {
     width: 100%;
     padding: 12px;
-    background: #28a745;
+    background: #007bff;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -35,9 +46,10 @@
 }
 
 .login-form button:hover {
-    background: #218838;
+    background: #0056b3;
 }
 
+/* Text & links */
 .login-container p {
     margin-top: 10px;
     font-size: 14px;
@@ -53,22 +65,9 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .login-container {
-        margin-left: 220px;
-    }
-}
-
 @media (max-width: 768px) {
     .login-container {
-        margin-left: 180px;
-        width: 320px;
-    }
-}
-
-@media (max-width: 600px) {
-    .login-container {
+        width: 90%; /* Make it more responsive */
         margin: 50px auto;
-        max-width: 90%;
     }
 }

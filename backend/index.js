@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const Signup = require("./models/SignupSchema");
+const Student =require('./models/StudentSchema');
 const app = express();
 
 app.use(cors());
@@ -112,6 +113,37 @@ app.post("/login", async (req, res) => {
   } catch (error) {
     console.log("Login Error");
     res.status(400).json({ message: "Login Error", isLoggedIn: false });
+  }
+});
+// post vechi data va nama insert pana
+
+app.post("/teachers", async (req, res) => {
+  try {
+    const { sName, sDepartment, address, phoneNumber } = req.body;
+
+    const newTeacher = new Teacher({
+      sName:sName,
+      sDepartment:sDepartment,
+      address:address,
+      phoneNumber:phoneNumber,
+    });
+    await newTeacher.save();
+    
+    res.status(201).json({ message: "Teacher added successfully" });
+  } catch (error) {
+    res.status(500).json({ message: "Error adding teacher", error });
+  }
+});
+
+
+/// edu teacher ku details
+
+app.get("/teachers", async (req, res) => {
+  try {
+    const teachers = await Teacher.find();
+    res.json(teachers);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching teacher details" });
   }
 });
 
